@@ -22,7 +22,6 @@ const currencyFormat = ({
   return formattedCurrency;
 };
 
-default currencyFormat;
 const toggleList = () => {};
 
 const createList = (list = [], id = "country-list") => {
