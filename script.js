@@ -1,4 +1,4 @@
-export const currencyLocalMap = {
+const currencyLocalMap = {
   INR: "en-IN",
   USD: "en-US",
 };
@@ -22,10 +22,10 @@ const currencyFormat = ({
   return formattedCurrency;
 };
 
-export default currencyFormat;
-export const toggleList = () => {};
+default currencyFormat;
+const toggleList = () => {};
 
-export const createList = (list = [], id = "country-list") => {
+const createList = (list = [], id = "country-list") => {
   const element = document.getElementById(id);
   element.innerHTML = null;
   var frag = document.createDocumentFragment();
@@ -40,14 +40,14 @@ export const createList = (list = [], id = "country-list") => {
   element.appendChild(frag);
 };
 
-export const filterList = (list = [], text = "", id) => {
+const filterList = (list = [], text = "", id) => {
   const filteredList = list.filter((item) =>
     item.label.toLowerCase().includes(text?.toLowerCase())
   );
   createList(filteredList, id);
 };
 
-export const createTaxList = (data = [], id) => {
+const createTaxList = (data = [], id) => {
   const accordian = document.getElementById(id);
 
   if (!accordian) return;
@@ -88,7 +88,7 @@ const currencyList = [
 ];
 
 const url =
-  "https://storage.googleapis.com/skuad-public-assets/country-list.json";
+  "https://storage.googleapis.com/skuad-public-assets/cc-country-list.json";
 const fetchCountryData = async (url) => {
   let response = await fetch(url);
   const newVar = await response.json();
